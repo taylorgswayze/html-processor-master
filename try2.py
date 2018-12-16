@@ -45,6 +45,21 @@ def send():
             i['style'] = 'text-decoration:none;color:#' + brandtextcolor + ';'
             i['target'] = '_blank'
 
+        # displayblock images
+        for i in soup.find_all('img'):
+            i['style'] = 'display:block;'ß
+
+        # WRAP ROWS IN TABLES
+        for i in soup.find_all('tr'):
+            i.wrap(soup.new_tag('table'))
+
+        # CTA FORMATTING
+        for i in soup.find_all(id="CTA"):
+            i['bgcolor'] = brandcolor
+            i['valign'] = 'middle'
+            i.img.replace_with('SHOP NOW')
+            i['style'] = 'font-size:16px;color:#' + brandtextcolor
+
         all = soup
 
         soup = soup.prettify()
