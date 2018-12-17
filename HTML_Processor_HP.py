@@ -89,3 +89,13 @@ html.close()
 html = soup.prettify("utf-8")
 with open(filename, 'wb') as file:
    file.write(html)
+
+# WRAP TAGGED IMAGES IN LINKS
+        counter = 1
+        for i in soup.find_all('img'):
+
+            linkareas = soup.find_all(id="link" + str(counter))
+            for img in linkareas:
+                hrefd = '$clickthrough(' + linknames[counter - 1] + ',myURL' + dcparam + urls[counter - 1] + '?tmemail=)$'
+                img.wrap(soup.new_tag('a', href=hrefd))
+            counter += 1

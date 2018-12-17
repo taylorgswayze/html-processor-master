@@ -5,7 +5,7 @@ app = Flask(__name__)
 linknames =[]
 urls = []
 
-@app.route('/send', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def send():
     if request.method == 'POST':
         html = request.form['html']
@@ -21,6 +21,10 @@ def send():
             brandcolor = 'ffcb08'
             brandtextcolor = '000001'
             dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3336688CATFOOTWEAR/B21328916.223455667;dc_trk_aid=421618445;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
+        elif brand == 'hp':
+            brandtextcolor = '707072'
+            brandcolor = 'ffffff'
+            dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3336694HUSHPUPPIES/B21328916.223583574;dc_trk_aid=421618454;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
         elif brand == 'merrell':
             brandtextcolor = 'ffffff'
             brandcolor = 'da4726'
@@ -28,7 +32,6 @@ def send():
         else:
             brandcolor = 'ffffff'
             dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3336688CATFOOTWEAR/B21328916.223455667;dc_trk_aid=421618445;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
-
 
         # WRAP TAGGED IMAGES IN LINKS
         counter = 1
@@ -47,11 +50,35 @@ def send():
 
         # displayblock images
         for i in soup.find_all('img'):
-            i['style'] = 'display:block;'ß
+            i['style'] = 'display:block;'
 
         # WRAP ROWS IN TABLES
         for i in soup.find_all('tr'):
             i.wrap(soup.new_tag('table'))
+
+        # TABLE FORMATTING
+        for i in soup.find_all('table'):
+            i['border'] = '0'
+            i['cellpadding'] = '0'
+            i['cellborder'] = '0'
+            i['align'] = 'center'
+            i['valign'] = 'top'
+            i['style'] = 'border-collapse:collapse;font-family:arial,helvetica,sans-serif;font-weight:bold;color:#000001;'
+            i['cellpadding'] = '0'
+
+        # CELL FORMATTING
+        for i in soup.find_all('td'):
+            i['height'] = i.img['height']
+            i['width'] = i.img['width']
+            i['border'] = '0'
+            i['cellpadding'] = '0'
+            i['cellborder'] = '0'
+            i['align'] = 'center'
+            i['valign'] = 'top'
+            i['bgcolor'] = 'ffffff'
+            i['style'] = 'border-collapse:collapse;font-size:16px;'
+            i['cellpadding'] = '0'
+
 
         # CTA FORMATTING
         for i in soup.find_all(id="CTA"):
@@ -60,14 +87,10 @@ def send():
             i.img.replace_with('SHOP NOW')
             i['style'] = 'font-size:16px;color:#' + brandtextcolor
 
-        all = soup
-
         soup = soup.prettify()
-        return render_template('result.html', all=all)
+        return soup
 
     return render_template('my_form.html')
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)
