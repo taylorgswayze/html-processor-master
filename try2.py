@@ -39,7 +39,7 @@ def send():
 
             linkareas = soup.find_all(id="link" + str(counter))
             for img in linkareas:
-                hrefd = '$clickthrough(' + linknames[counter - 1] + ',myURL' + dcparam + urls[counter - 1] + '?tmemail=)$'
+                hrefd = '$clickthrough(' + linknames[counter - 1] + ',myURL=' + dcparam + urls[counter - 1] + '?tmemail=)$'
                 img.wrap(soup.new_tag('a', href=hrefd))
             counter += 1
 
