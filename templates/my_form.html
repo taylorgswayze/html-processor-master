@@ -1,6 +1,10 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 	<head >
+	    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
 	<link href="https://fonts.googleapis.com/css?family=Oswald:500" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link href="style.css" rel="stylesheet">
@@ -22,15 +26,18 @@ input {
 
 input[type=text] {
   font-family: Courier;
+  resize: both;
 }
 
-
+textarea {
+    resize:both;
+}
   </style>
 
 	</head>
 	<body>
 
-<form action="/" method="POST">
+<form action="/" method="POST" autocomplete="off">
 	<h1>Paste HTML:</h1>
 	<input type="text" name="html">
 
@@ -44,7 +51,7 @@ input[type=text] {
 		</div>
 
 	<h1>Number of Links</h1>
-	<input type="text" name="numlinks"><br/>
+	<input type="text" name="numlinks" required="required"><br/>
 
 <h1>Links:</h1>
 
