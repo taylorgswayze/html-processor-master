@@ -25,6 +25,10 @@ def send():
             brandtextcolor = '707072'
             brandcolor = 'ffffff'
             dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3336694HUSHPUPPIES/B21328916.223583574;dc_trk_aid=421618454;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
+        elif brand == 'sperry':
+            brandcolor = 'e04503'
+            brandtextcolor = 'ffffff'
+            dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3356031SPERRYFOOTWEAR/B21328916.223354352;dc_trk_aid=421618748;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua='
         elif brand == 'merrell':
             brandtextcolor = 'ffffff'
             brandcolor = 'da4726'
