@@ -1,0 +1,16 @@
+body {
+  background-color: #C3A57F;
+}
+
+h1 {
+  color:white;
+  font-family: oswald;
+}
+input {
+  font-family: oswald;
+  margin-left: 5px;
+}
+
+input[type=text] {
+  font-family: Courier;
+}
