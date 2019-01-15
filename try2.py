@@ -2,12 +2,13 @@ from flask import Flask, render_template, request
 from bs4 import BeautifulSoup
 app = Flask(__name__)
 
-linknames =[]
-urls = []
+
 
 @app.route('/', methods=['GET', 'POST'])
 def send():
     if request.method == 'POST':
+        linknames =[]
+        urls = []
         html = request.form['html']
         brand = request.form['brand']
         numlinks = int(request.form['numlinks'])
