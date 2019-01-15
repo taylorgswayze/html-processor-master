@@ -22,6 +22,22 @@ def send():
             brandcolor = 'ffcb08'
             brandtextcolor = '000001'
             dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3336688CATFOOTWEAR/B21328916.223455667;dc_trk_aid=421618445;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
+        elif brand == 'bates':
+            brandcolor = '4C6D8B'
+            brandtextcolor = 'ffffff'
+            dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3356949BATES/B21328916.223351460;dc_trk_aid=421680288;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
+        elif brand == 'chaco':
+            brandcolor = 'e9d171'
+            brandtextcolor = 'ffffff'
+            dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3336691CHACO/B21328916.223354301;dc_trk_aid=421618448;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
+        elif brand == 'keds':
+            brandcolor = 'ffffff'
+            brandtextcolor = '000001'
+            dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3337588KEDS/B21328916.223584159;dc_trk_aid=421618466;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
+        elif brand == 'hdf':
+            brandcolor = 'E15700'
+            brandtextcolor = 'ffffff'
+            dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3349652HARLEY/B21328916.223354859;dc_trk_aid=421618460;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
         elif brand == 'hp':
             brandtextcolor = '707072'
             brandcolor = 'ffffff'
@@ -29,11 +45,19 @@ def send():
         elif brand == 'sperry':
             brandcolor = 'e04503'
             brandtextcolor = 'ffffff'
-            dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3356031SPERRYFOOTWEAR/B21328916.223354352;dc_trk_aid=421618748;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua='
+            dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3356031SPERRYFOOTWEAR/B21328916.223354352;dc_trk_aid=421618748;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
         elif brand == 'merrell':
             brandtextcolor = 'ffffff'
             brandcolor = 'da4726'
             dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3349655MERRELL/B21328916.223459126;dc_trk_aid=421618463;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
+        elif brand == 'saucony':
+            brandtextcolor = 'ffffff'
+            brandcolor = '000001'
+            dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.159760SAUCONY/B21328916.223458955;dc_trk_aid=421618472;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
+        elif brand == 'wolverine':
+            brandcolor = 'A41E21'
+            brandtextcolor = 'ffffff'
+            dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3345731WOLVERINE/B21328916.223354358;dc_trk_aid=421618751;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
         else:
             brandcolor = 'ffffff'
             dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3336688CATFOOTWEAR/B21328916.223455667;dc_trk_aid=421618445;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
