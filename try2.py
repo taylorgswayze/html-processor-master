@@ -1,9 +1,6 @@
 from flask import Flask, render_template, request
 from bs4 import BeautifulSoup
 app = Flask(__name__)
-
-
-
 @app.route('/', methods=['GET', 'POST'])
 def send():
     if request.method == 'POST':
@@ -74,10 +71,15 @@ def send():
 
             linkareas = soup.find_all(id="link" + str(counter))
             for img in linkareas:
-                hrefd = '$clickthrough(' + linknames[counter - 1] + ',myURL=' + dcparam + urls[counter - 1] + '?tmemail=)$'
+                chars = set('?')
+                if any((c in chars) for c in urls[counter - 1]):
+                    dcparamchar = '&'
+                else:
+                    dcparamchar = '?'
+                hrefd = '$clickthrough(' + linknames[counter - 1] + ',myURL=' + dcparam + urls[counter - 1] + dcparamchar + 'tmemail=)$'
                 img.wrap(soup.new_tag('a', href=hrefd))
             counter += 1
-
+        print(soup.find_all('a'))
         # FORMAT A TAGS
         for i in soup.find_all('a'):
             i['style'] = 'text-decoration:none;color:#' + brandtextcolor + ';'
@@ -130,8 +132,8 @@ def send():
 
 
 
-        soup = soup.prettify()
-        return soup
+        print(soup.prettify())
+        return soup.prettify(formatter=None)
 
     return render_template('my_form.html')
 
