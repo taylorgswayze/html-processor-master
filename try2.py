@@ -13,6 +13,7 @@ def send():
         brand = request.form['brand']
         numlinks = int(request.form['numlinks'])
         soup = BeautifulSoup(html, 'html.parser')
+        primarycolor = request.form['primarycolor']
 
         for i in range(1, (numlinks + 1)):
             linknames.append(request.form['linkname' + str(i)])
@@ -39,8 +40,8 @@ def send():
             brandtextcolor = 'ffffff'
             dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3349652HARLEY/B21328916.223354859;dc_trk_aid=421618460;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
         elif brand == 'hp':
-            brandtextcolor = '707072'
-            brandcolor = 'ffffff'
+            brandtextcolor = 'ffffff'
+            brandcolor = '707072'
             dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3336694HUSHPUPPIES/B21328916.223583574;dc_trk_aid=421618454;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
         elif brand == 'sperry':
             brandcolor = 'e04503'
@@ -61,6 +62,11 @@ def send():
         else:
             brandcolor = 'ffffff'
             dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3336688CATFOOTWEAR/B21328916.223455667;dc_trk_aid=421618445;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
+
+        if primarycolor:
+            brandcolor = primarycolor
+        else:
+            pass
 
         # WRAP TAGGED IMAGES IN LINKS
         counter = 1
@@ -115,6 +121,14 @@ def send():
             i['valign'] = 'middle'
             i.img.replace_with('SHOP NOW')
             i['style'] = 'font-size:16px;color:#' + brandtextcolor
+
+        for i in soup.find_all(id="text"):
+            i['bgcolor'] = 'ffffff'
+            i['valign'] = 'top'
+            i.img.replace_with('ProductName')
+            i['style'] = 'font-size:18px;color:#' + brandtextcolor
+
+
 
         soup = soup.prettify()
         return soup
