@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from bs4 import BeautifulSoup
+from fragments import *
 app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def send():
@@ -20,6 +21,8 @@ def send():
             brandcolor = 'ffcb08'
             brandtextcolor = '000001'
             dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3336688CATFOOTWEAR/B21328916.223455667;dc_trk_aid=421618445;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
+            header = catheader
+            footer = catfooter
         elif brand == 'bates':
             brandcolor = '4C6D8B'
             brandtextcolor = 'ffffff'
@@ -40,6 +43,8 @@ def send():
             brandtextcolor = 'ffffff'
             brandcolor = '707072'
             dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3336694HUSHPUPPIES/B21328916.223583574;dc_trk_aid=421618454;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
+            header = hpheader
+            footer = hpfooter
         elif brand == 'sperry':
             brandcolor = 'e04503'
             brandtextcolor = 'ffffff'
@@ -48,6 +53,8 @@ def send():
             brandtextcolor = 'ffffff'
             brandcolor = 'da4726'
             dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3349655MERRELL/B21328916.223459126;dc_trk_aid=421618463;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
+            header = merrellheader
+            footer = merrellfooter
         elif brand == 'saucony':
             brandtextcolor = 'ffffff'
             brandcolor = '000001'
@@ -79,7 +86,7 @@ def send():
                 hrefd = '$clickthrough(' + linknames[counter - 1] + ',myURL=' + dcparam + urls[counter - 1] + dcparamchar + 'tmemail=)$'
                 img.wrap(soup.new_tag('a', href=hrefd))
             counter += 1
-        print(soup.find_all('a'))
+
         # FORMAT A TAGS
         for i in soup.find_all('a'):
             i['style'] = 'text-decoration:none;color:#' + brandtextcolor + ';'
@@ -130,9 +137,14 @@ def send():
             i.img.replace_with('ProductName')
             i['style'] = 'font-size:18px;color:#' + brandtextcolor
 
+        if header:
+            soup.table.insert_before(header)
+            soup.find_all('table')[-1].insert_after(footer)
 
 
-        print(soup.prettify())
+
+
+        print(soup.prettify(formatter=None))
         return soup.prettify(formatter=None)
 
     return render_template('my_form.html')
