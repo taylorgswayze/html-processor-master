@@ -131,6 +131,7 @@ def send():
             i.img.replace_with('SHOP NOW')
             i['style'] = 'font-size:16px;color:#' + brandtextcolor
 
+        # Text area formatting
         for i in soup.find_all(id="text"):
             i['bgcolor'] = 'ffffff'
             i['valign'] = 'top'
