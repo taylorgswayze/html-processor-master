@@ -55,6 +55,12 @@ def send():
             dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3349655MERRELL/B21328916.223459126;dc_trk_aid=421618463;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
             header = merrellheader
             footer = merrellfooter
+        elif brand == 'merrelloutlet':
+            brandtextcolor = 'ffffff'
+            brandcolor = 'da4726'
+            dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3349655MERRELL/B21328916.223459126;dc_trk_aid=421618463;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
+            header = merrelloutletheader
+            footer = merrelloutletfooter
         elif brand == 'saucony':
             brandtextcolor = 'ffffff'
             brandcolor = '000001'
