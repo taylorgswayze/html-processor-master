@@ -256,20 +256,12 @@ $document(UpdatedContentDirectory_MerrellUS,MerrellUS_Email_Header_20180625_Outl
     </tr>
     <tr>
     	<td width="600" align="center" valign="top" style="bgcolor:#ffffff;" >
-			<table width="600" valign="top" align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff" border="0" style="border-collapse:collapse;font-style:normal;font-variant:normal;font-weight:normal;font-size:24px;font-family:arial, helvetica, sans-serif;line-height:normal;letter-spacing:0.1em;" >
 
 <!-- MAIN CONTENT -->
 """
 
 merrelloutletfooter = """
 <!-- END CONTENT -->
-
-	</table>
-	</td>
-    </tr>
-
-    <tr>
-    	<td width="600" align="center" valign="top">
 
 <!--PREFOOTER-->
 $document(UpdatedContentDirectory_MerrellUS,MerrellUS_Email_Prefooter_20180625.htm)$
