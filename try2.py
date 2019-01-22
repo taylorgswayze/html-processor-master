@@ -26,6 +26,8 @@ def send():
         elif brand == 'bates':
             brandcolor = '4C6D8B'
             brandtextcolor = 'ffffff'
+            header = batesheader
+            footer = batesfooter
             dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3356949BATES/B21328916.223351460;dc_trk_aid=421680288;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
         elif brand == 'chaco':
             brandcolor = 'e9d171'
@@ -38,6 +40,8 @@ def send():
         elif brand == 'hdf':
             brandcolor = 'E15700'
             brandtextcolor = 'ffffff'
+            header = hdfheader
+            footer = hdffooter
             dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3349652HARLEY/B21328916.223354859;dc_trk_aid=421618460;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
         elif brand == 'hp':
             brandtextcolor = 'ffffff'
@@ -48,6 +52,8 @@ def send():
         elif brand == 'sperry':
             brandcolor = 'e04503'
             brandtextcolor = 'ffffff'
+            header = sperryheader
+            footer = sperryfooter
             dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3356031SPERRYFOOTWEAR/B21328916.223354352;dc_trk_aid=421618748;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
         elif brand == 'merrell':
             brandtextcolor = 'ffffff'
@@ -64,10 +70,14 @@ def send():
         elif brand == 'saucony':
             brandtextcolor = 'ffffff'
             brandcolor = '000001'
+            header = sauconyheader
+            footer = sauconyfooter
             dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.159760SAUCONY/B21328916.223458955;dc_trk_aid=421618472;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
         elif brand == 'wolverine':
             brandcolor = 'A41E21'
             brandtextcolor = 'ffffff'
+            header = wolverineheader
+            footer = wolverinefooter
             dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3345731WOLVERINE/B21328916.223354358;dc_trk_aid=421618751;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
         else:
             brandcolor = 'ffffff'
