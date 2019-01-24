@@ -147,9 +147,6 @@ merrellheader = """
 
 	<IMG SRC="https://ad.doubleclick.net/ddm/trackimp/N800582.3349655MERRELL/B21328916.223459126;dc_trk_aid=421618463;dc_trk_cid=102927023;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?" BORDER="0" HEIGHT="1" WIDTH="1" ALT="" style="display:block;" >
 
-	<!-- Start RealTime Email Embed - Patents Pending -->
-<img src="https://em.realtime.email/service/rte?kind=duration&account_id=7995&campaign_id=1848894052&dim0=$lookup(RIID_)$" style="width:0px; height:0px;"/>
-<!-- End RealTime Email Embed - Patents Pending -->
 </head>
 <body style="margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;" >
 
@@ -221,9 +218,6 @@ merrelloutletheader = """
 		img {display: block}
 	</style>
 
-	<!-- Start RealTime Email Embed - Patents Pending -->
-<img src="https://em.realtime.email/service/rte?kind=duration&account_id=7995&campaign_id=1113572933&dim0=$lookup(RIID_)$" style="width:0px; height:0px;"/>
-<!-- End RealTime Email Embed - Patents Pending -->
 </head>
 <body style="margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;" >
 
