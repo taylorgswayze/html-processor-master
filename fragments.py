@@ -191,9 +191,6 @@ merrellfooter = """
 	<!-- END CONTENT -->
 
 
-	</table>
-	</td>
-    </tr>
 
     <tr>
     	<td width="600" align="center" valign="top">
