@@ -147,12 +147,12 @@ def send():
             i.img.replace_with('SHOP NOW')
             i['style'] = 'font-size:16px;color:#' + brandtextcolor
 
-            # CTA FORMATTING
-            for i in soup.find_all(id="CTA"):
-                i['bgcolor'] = brandcolor
-                i['valign'] = 'middle'
-                i.img.replace_with('SHOP NOW')
-                i['style'] = 'font-size:16px;color:#' + brandtextcolor
+            # cta FORMATTING
+        for i in soup.find_all(id="cta"):
+            i['bgcolor'] = brandcolor
+            i['valign'] = 'middle'
+            i.img.replace_with('SHOP NOW')
+            i['style'] = 'font-size:16px;color:#' + brandtextcolor
 
         # Text area formatting
         for i in soup.find_all(id="text"):
