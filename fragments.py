@@ -36,7 +36,6 @@ hpheader = """
     </tr>
 </table>
 
-
 <!--HEADER-->
 
 $document(UpdatedContentDirectory_HushPuppiesUS,HushPuppies-Header-20180628.htm)$
@@ -176,7 +175,7 @@ $document(UpdatedContentDirectory_MerrellUS,MerrellUS_Email_Header_20180625.htm)
     </tr>
     <tr>
     	<td width="600" align="center" valign="top" style="bgcolor:#ffffff;" >
-        
+
 <!-- MAIN CONTENT -->
 
 
