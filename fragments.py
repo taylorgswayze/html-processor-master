@@ -38,11 +38,19 @@ hpheader = """
 
 <!--HEADER-->
 
-$document(UpdatedContentDirectory_HushPuppiesUS,HushPuppies-Header-20180628.htm)$
+$document(UpdatedContentDirectory_HushPuppiesUS,HP-US-SS19-Header.htm)$
 		</td>
     </tr>
     <tr>
     	<td width="600" align="center" valign="top">
+
+<table align="center" border="0" cellborder="0" cellpadding="0" style="border-collapse:collapse;font-family:arial,helvetica,sans-serif;font-weight:normal;color:#000001;" valign="top">
+ <tr>
+  <td align="center" bgcolor="e8e2d6" border="0" cellborder="0" cellpadding="0" colspan="2" height="40" id="CTA" style="font-size:14px;color:#000001" valign="middle" width="600">
+   $PROMO$
+  </td>
+ </tr>
+</table>
 
 <!-- MAIN CONTENT -->
 
@@ -53,13 +61,13 @@ hpfooter = """
 
 
 			<!--PREFOOTER-->
-$document(UpdatedContentDirectory_HushPuppiesUS,HushPuppies-PreFooter-20180628.htm)$
+$document(UpdatedContentDirectory_HushPuppiesUS,HP-US-SS19-PreFooter.htm)$
 		</td>
     </tr>
     <tr>
     	<td width="600" align="center" valign="top">
 <!--FOOTER-->
-$document(UpdatedContentDirectory_HushPuppiesUS,HushPuppies-Footer-20180628.htm)$
+$document(UpdatedContentDirectory_HushPuppiesUS,HP-US-SS19-Footer.htm)$
 		</td>
     </tr>
 </table>
