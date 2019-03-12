@@ -61,7 +61,7 @@ hpfooter = """
 
 
 			<!--PREFOOTER-->
-$document(UpdatedContentDirectory_HushPuppiesUS,HP-US-SS19-PreFooter.htm)$
+$document(UpdatedContentDirectory_HushPuppiesUS,HP-US-SS19-PreFooter2.htm)$
 		</td>
     </tr>
     <tr>
