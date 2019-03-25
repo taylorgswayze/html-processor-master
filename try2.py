@@ -44,8 +44,8 @@ def send():
             footer = hdffooter
             dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3349652HARLEY/B21328916.223354859;dc_trk_aid=421618460;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
         elif brand == 'hp':
-            brandtextcolor = 'ffffff'
-            brandcolor = '707072'
+            brandtextcolor = '000001'
+            brandcolor = 'ffffff'
             dcparam = 'https://ad.doubleclick.net/ddm/trackclk/N800582.3336694HUSHPUPPIES/B21328916.223583574;dc_trk_aid=421618454;dc_trk_cid=102927023;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?'
             header = hpheader
             footer = hpfooter
