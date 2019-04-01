@@ -199,7 +199,7 @@ merrellfooter = """
     	<td width="600" align="center" valign="top">
 
 <!--PREFOOTER-->
-$document(UpdatedContentDirectory_MerrellUS,MerrellUS_Email_Prefooter_20180625.htm)$
+$document(UpdatedContentDirectory_MerrellUS,MerrellUS_Email_Prefooter_20190401.htm)$
 		</td>
     </tr>
     <tr>
@@ -261,7 +261,7 @@ merrelloutletfooter = """
 <!-- END CONTENT -->
 
 <!--PREFOOTER-->
-$document(UpdatedContentDirectory_MerrellUS,MerrellUS_Email_Prefooter_20180625.htm)$
+$document(UpdatedContentDirectory_MerrellUS,MerrellUS_Email_Prefooter_20190401.htm)$
 		</td>
     </tr>
     <tr>
@@ -836,5 +836,9 @@ sauconyfooter = """
 
 </body>
 </html>
+
+"""
+
+sperryheader = """
 
 """
