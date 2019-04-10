@@ -61,15 +61,20 @@ hpfooter = """
 
 
 			<!--PREFOOTER-->
+<table align="center" border="0" cellborder="0" cellpadding="0" style="border-collapse:collapse;font-family:arial,helvetica,sans-serif;font-weight:normal;color:#000001;" valign="top">
 $document(UpdatedContentDirectory_HushPuppiesUS,HP-US-SS19-PreFooter2.htm)$
 		</td>
     </tr>
+</table>
+
+<table align="center" border="0" cellborder="0" cellpadding="0" style="border-collapse:collapse;font-family:arial,helvetica,sans-serif;font-weight:normal;color:#000001;" valign="top">
     <tr>
     	<td width="600" align="center" valign="top">
 <!--FOOTER-->
 $document(UpdatedContentDirectory_HushPuppiesUS,HP-US-SS19-Footer.htm)$
 		</td>
     </tr>
+</table>
 </table>
 
 </body>
